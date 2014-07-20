@@ -46,11 +46,15 @@ def get_category():
 
 @app.route('/fetch/worker', methods=['GET'])
 def get_workers():
+    if request:
+        app.logger.info('request headers - {0}'.format(request.headers))
     category = request.args.get('category')
     filtered_list = []
     final_list = []
     # query = db.session.query(TweetInfo).filter(TweetInfo.published == TWEET_PUBLISHED).order_by(db.desc(TweetInfo.id))
     query = db.session.query(Worker).all()
+    if query:
+        app.logger.info('query value true')
     for item in query:
         if item.category == category:
             filtered_list.append(item)
