@@ -13,6 +13,11 @@ class Worker(db.Model):
     latitude = db.Column(db.String())
     image = db.Column(db.String())
 
+class Consumer(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    uuid = db.Column(db.String())
+    workerid = db.Column(db.Integer)
+    
 
 class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
