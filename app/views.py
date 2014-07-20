@@ -2,7 +2,7 @@ from app import app, db
 from flask import Flask, jsonify, request, make_response, abort
 from utils import calc_dist, create_dictionary
 import unicodedata
-from models import Worker
+from models import Worker, Category
 from data import skilled_workers, category_list
 
 
@@ -26,9 +26,9 @@ def migration_worker():
 @app.route('/migration/category', methods=['GET'])
 def migration_category():
     for item in category_list:
-        worker_object = Worker(name=item['name'],
-                               tagline=item['tagline'],
-                               image=item['image'],)
+        worker_object = Category(name=item['name'],
+                                 tagline=item['tagline'],
+                                 image=item['image'],)
         db.session.add(worker_object)
         db.session.commit()
     return make_response(jsonify({'error': 'Not found'}))

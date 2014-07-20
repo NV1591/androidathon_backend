@@ -108,7 +108,34 @@ skilled_workers = [
         'phone': 9999888822,
         'latitude': - 28.53452570,
         'longitude': 77.293669499999960,
+        'image': "",
     },
 ]
 
-category_list = []
+category_list = [
+    {
+        'name': "Electrician",
+        'tagline': "Short of power?",
+        'image': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgVCxBgphG_gCtkfnOiEvrxbjY_RP-8wnoeykR4mlxi2l2Ustw",
+    },
+    {
+        'name': "Plumber",
+        'tagline': "Tired of those leaky pipes?",
+        'image': "http://www.abstractplumbing.com.au/images/templates/big-image-2.png",
+    },
+    {
+        'name': "Carpenter",
+        'tagline': "Confused about the right tools?",
+        'image': "http://thumb7.shutterstock.com/display_pic_with_logo/491584/491584,1318241560,1/stock-photo-carpentry-background-tools-underneath-the-wood-plank-86313664.jpg",
+    },
+    {
+        'name': "Painter",
+        'tagline': "Let us help you paint your life",
+        'image': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXal2kidI2ZzpMswy5kI3f8IQVIxtzb8U9lR14wJ5qCc2RyAPLxQ",
+    },
+    {
+        'name': "Mechanic",
+        'tagline': "We can get your engine running.",
+        'image': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXal2kidI2ZzpMswy5kI3f8IQVIxtzb8U9lR14wJ5qCc2RyAPLxQ",
+    },
+]
