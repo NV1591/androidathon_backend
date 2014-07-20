@@ -96,6 +96,15 @@ def create_worker():
     db.session.commit()
     return jsonify({'success': 'worker created'}), 201
 
+@app.route('/consumer/create/', methods=['POST'])
+def create_consumer():
+    if not request.json:
+        abort(400)
+    consumer_object = Consumet(uuid=request.json['uuid'],
+                           workerid=request.json['worker_id'],)
+    db.session.add(consumer_object)
+    db.session.commit()
+    return jsonify({'success': 'consumer created'}), 201
 
 @app.errorhandler(404)
 def not_found(error):
